@@ -28,13 +28,26 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
+function datasearch(data) {
+    console.log(data);
+    var values = document.getElementById("datasearch").value;
+//    myLineChart.data.datasets[0].data = [5000, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 100000];
+//    var data = JSON.parse(data);
+    var fin =[]
+    for (var i=0; i<data.length;i++){
+        fin.push(data[i]['changes'])
+    }
+    console.log(fin);
+    myLineChart.data.datasets[0].data = fin;
+    myLineChart.update();
+}
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["Jan", "Feb", "Mar", "Apr", ],
     datasets: [{
-      label: "Earnings",
+      label: "변동률",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -46,7 +59,9 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+//      data: [5000, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 100000],
+      data:[],
+
     }],
   },
   options: {
@@ -62,7 +77,7 @@ var myLineChart = new Chart(ctx, {
     scales: {
       xAxes: [{
         time: {
-          unit: 'date'
+          unit: 'dates'
         },
         gridLines: {
           display: false,
@@ -73,6 +88,7 @@ var myLineChart = new Chart(ctx, {
         }
       }],
       yAxes: [{
+      // y축
         ticks: {
           maxTicksLimit: 5,
           padding: 10,
@@ -107,10 +123,13 @@ var myLineChart = new Chart(ctx, {
       intersect: false,
       mode: 'index',
       caretPadding: 10,
+
+//      데이터 값 라벨 표시
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + ' : ' + number_format(chart.datasets[tooltipItem.datasetIndex].data) + '%';
+//          return datasetLabel + ' : ' + number_format(tooltipItem.yLabel) + '%';
         }
       }
     }
