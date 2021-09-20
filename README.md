@@ -13,7 +13,7 @@
 
 - DS - DE 역할 분담![image-20210827230959954](/image-20210827230959954.png)
 
-- data : youtube, 뉴스 기사 크롤링, FinanceDataReader( 한국거래소 자료)
+- data : youtube, 뉴스 기사 크롤링, FinanceDataReader(한국거래소 자료)
 
 - 개요 :
 
