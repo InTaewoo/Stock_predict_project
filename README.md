@@ -74,3 +74,54 @@
   >    3. 유튜브 이슈 워드 클라우드   
   >    4. 보도 이슈 워드 클라우드 
 
+![image](https://user-images.githubusercontent.com/81672260/136681768-c1cc669f-50f9-4cb7-bbb5-fbb697684763.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681779-e1794278-3638-4e29-b676-3280215532d3.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681786-667f4890-f04f-40ea-af66-afe7faa64b7f.png)
+
+
+![image](https://user-images.githubusercontent.com/81672260/136681801-b3fcbe24-c4f3-49f8-a66c-559762d58218.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681806-7a1d5055-403c-4346-8a9d-2c1553d146df.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681821-ddceb911-a971-47cb-b965-388b99928eff.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681856-6d5b0762-449e-411e-afef-58336fa1b4c2.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681875-27adce7c-2bbd-4884-b57b-da9702839d66.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681893-e1aba86e-8f57-4d11-ad22-1ac811699d53.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681896-5743d689-beed-4c7a-bf45-e113a5c7eb60.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681898-ec676fd4-e7b9-4a37-9782-7f538c70a0cc.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681899-3b916d9f-d96c-4218-9cc1-62ef2347dd78.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681905-b7142dc9-0f98-4956-94e9-96f34a6127a6.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681910-fcdf8be0-b9e0-4c82-8f48-a1d6adb38ef9.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681917-b996bfc1-b2a8-4f18-bd40-5466996ebae3.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681921-8cd6694a-2172-4bab-94a3-67cfb1eb24cf.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681928-c07754a4-a2a2-4bd9-9c76-c8be13781cf6.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681941-e2b2dda9-1017-47a4-867a-a5b5d21aad16.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681954-6e8f4b6b-b368-4184-b08e-8004e49bb717.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681960-ca1d6f9c-12ae-45ef-a92d-e1a7d26d9857.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136681967-bcf07009-3de0-4da3-9ac9-79e056e42764.png)
+
+![Uploading image.png…]()
+
+
+
+
+
+
+
