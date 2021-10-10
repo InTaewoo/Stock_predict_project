@@ -28,40 +28,41 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
+// html -> JS로 데이터 가지고 오는 부분
+// HTML에 호출한 함수 이름(datasearch)
 function datasearch(data) {
-    console.log(data);
     var values = document.getElementById("datasearch").value;
-//    myLineChart.data.datasets[0].data = [5000, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 100000];
-//    var data = JSON.parse(data);
     var fin =[]
-    for (var i=0; i<data.length;i++){
-        fin.push(data[i]['changes'])
-    }
-    console.log(fin);
+    var dates = []
+	
+	myLineChart.data.datasets[0].pointBorderColor = "rgba(255, 0, 66, 1)"
     myLineChart.data.datasets[0].data = fin;
+    myLineChart.data.labels = dates;
     myLineChart.update();
-}
+}.
+
+// HTML에서 태그 ID 값
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", ],
+    labels:[],
     datasets: [{
       label: "변동률",
       lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
       pointRadius: 3,
-      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBackgroundColor: "rgba(206, 141, 153, 1)",
       pointBorderColor: "rgba(78, 115, 223, 1)",
       pointHoverRadius: 3,
       pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-//      data: [5000, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 100000],
+	  
+//      line 아래쪽 색칠
+      fill: true,
       data:[],
-
     }],
   },
   options: {
@@ -75,9 +76,10 @@ var myLineChart = new Chart(ctx, {
       }
     },
     scales: {
+	  // X축 라벨
       xAxes: [{
         time: {
-          unit: 'dates'
+          unit: 'date'
         },
         gridLines: {
           display: false,
@@ -88,13 +90,13 @@ var myLineChart = new Chart(ctx, {
         }
       }],
       yAxes: [{
-      // y축
+      // y축 라벨
         ticks: {
           maxTicksLimit: 5,
           padding: 10,
-          // Include a dollar sign in the ticks
+		  
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -125,11 +127,11 @@ var myLineChart = new Chart(ctx, {
       caretPadding: 10,
 
 //      데이터 값 라벨 표시
+//      마우스 오버레이트시 tooltips 표시
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ' : ' + number_format(chart.datasets[tooltipItem.datasetIndex].data) + '%';
-//          return datasetLabel + ' : ' + number_format(tooltipItem.yLabel) + '%';
+            return datasetLabel + ' : ' + tooltipItem.value;
         }
       }
     }

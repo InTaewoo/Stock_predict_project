@@ -27,20 +27,67 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-// Bar Chart Example
+// html -> JS로 데이터 가지고 오는 부분
+// HTML 에서 호출한 함수 이름
+function barchartsss(data) {
+	/// X,Y축 라벨 변경
+    min = Math.min(Number(data.arima),Number(data.fbprophet),Number(data.lstm),Number(data.close));
+    max = Math.max(Number(data.arima),Number(data.fbprophet),Number(data.lstm),Number(data.close));
+    if (min>100000){
+        min = Math.round(min/100000)*100000;
+    }else{
+        min = Math.round(min/10000)*10000;
+    }
+
+    if(max>100000){
+        max = Math.round(max/100000)*100000;
+    }else{
+        max = Math.round(max/10000)*10000;
+    }
+
+//   min max 값 차이가 별로 안 날때
+    if (max-min<10000){
+        min = min - 10000;
+        max = max + 10000;
+    }
+    
+    myBarChart.options.scales.yAxes[0].ticks.min = Number(min);
+    myBarChart.options.scales.yAxes[0].ticks.max = Number(max);
+    myBarChart.data.datasets[1].data = [data.arima,data.fbprophet,data.lstm];
+    myBarChart.data.datasets[0].data = [data.close,data.close,data.close];
+    myBarChart.update();
+}
+
+
+// HTML에서 태그 ID 값
 var ctx = document.getElementById("myBarChart");
+
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [{
-      label: "Revenue",
+    labels: ["ARIMA", "FBProphet", "LSTM"],
+    datasets: [
+
+    {
+//   종가 선
+        type : 'line',
+        fill : false,
+        lineTension : 0.2,
+        pointRadius : 0,
+        backgroundColor: 'rgb(255, 204, 0)',
+        borderColor: 'rgb(255, 204, 0)',
+        data: [0,0,0],
+    },
+//    ARIMA - FBProphet - LSTM 값	
+    {
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      data: [0,0,0],
+    }
+    ],
   },
+
   options: {
     maintainAspectRatio: false,
     layout: {
@@ -67,13 +114,12 @@ var myBarChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 0,
-          max: 15000,
+          min: 70000,
+          max: 76000,
           maxTicksLimit: 5,
           padding: 10,
-          // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value) + '원';
           }
         },
         gridLines: {
@@ -85,9 +131,13 @@ var myBarChart = new Chart(ctx, {
         }
       }],
     },
+
     legend: {
       display: false
     },
+	
+//      데이터 값 라벨 표시
+//      마우스 오버레이트시 tooltips 표시
     tooltips: {
       titleMarginBottom: 10,
       titleFontColor: '#6e707e',
@@ -103,7 +153,7 @@ var myBarChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+            return number_format(tooltipItem.yLabel)+'원';
         }
       }
     },
