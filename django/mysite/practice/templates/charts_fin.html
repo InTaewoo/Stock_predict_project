@@ -23,24 +23,9 @@
 
 </head>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-//     var agent_str = navigator.userAgent;
-//     console.log(agent_str);
-    var filter = "win16|win32|win64|mac|macintel"; 
-    if ( navigator.platform ) { 
-        if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 )
-   { 
-        //mobile
-        var device = 'mobile';
-    } else { //pc 
-        var device = 'pc';
-    } 
-    
-    }
-</script>    
+<!-- Page Wrapper -->
+
 <body id="page-top">
-
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -154,72 +139,57 @@
             </nav>
             
         <script>
-            if(device=='mobile'){
-                document.write("<div class='tableauPlaceholder' id='viz1633506223393' style='position: relative'>");
-                document.write("<noscript>");
-                document.write("<a href='#'>");
-                document.write("<img alt='종목별 예측 가격 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16334944207140&#47;_MOBI&#47;1_rss.png' style='border: none' />");
-                document.write("</a>");
-                document.write("</noscript>");
-                document.write("<object class='tableauViz'  style='display:none;'>");
-                document.write("<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> ");
-                document.write("<param name='embed_code_version' value='3' /> ");
-                document.write("<param name='name' value='_16334944207140&#47;_MOBI' />");
-                document.write("<param name='site_root' value='' />");
-                document.write("<param name='tabs' value='no' />");
-                document.write("<param name='toolbar' value='yes' />");
-                document.write("<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16334944207140&#47;_MOBI&#47;1.png' />");
-                document.write("<param name='animate_transition' value='yes' />");
-                document.write("<param name='display_static_image' value='yes' />");
-                document.write("<param name='display_spinner' value='yes' />");
-                document.write("<param name='display_overlay' value='yes' />");
-                document.write("<param name='display_count' value='yes' />");
-                document.write("<param name='language' value='ko-KR' />");
-                document.write("</object>");
-                document.write("</div>");
-                }
-				</script>
-		<script  type='text/javascript'>
-			var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-		</script>
-          <script type='text/javascript'>
-                
-            
-            if(device=='pc'){
-                document.write("<div class='tableauPlaceholder' id='viz1633508003613' style='position: relative'>");
-                document.write("<noscript>");
-                document.write("<a href='#'>");
-                document.write("<img alt='종목별 예측 가격 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7Z&#47;7Z6YK3HCC&#47;1_rss.png' style='border: none' />");
-                document.write("</a>");
-                document.write("</noscript>");
-                document.write("<object class='tableauViz'  style='display:none;'>");
-                document.write("<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> ");
-                document.write("<param name='embed_code_version' value='3' /> ");
-                document.write("<param name='name' value='_16334944207140&#47;_MOBI' />");
-                document.write(" <param name='path' value='shared&#47;7Z6YK3HCC' />");
-                document.write("<param name='toolbar' value='yes' />");
-                document.write("<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7Z&#47;7Z6YK3HCC&#47;1.png' />");
-                document.write("<param name='animate_transition' value='yes' />");
-                document.write("<param name='display_static_image' value='yes' />");
-                document.write("<param name='display_spinner' value='yes' />");
-                document.write("<param name='display_overlay' value='yes' />");
-                document.write("<param name='display_count' value='yes' />");
-                document.write("<param name='language' value='ko-KR' />");
-                document.write("</object>");
-                document.write("</div>");
-            }
-             var divElement = document.getElementById('viz1633508003613');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-         
+//     if(device=='pc'){
+        document.write("<div class='tableauPlaceholder' id='viz1633423521229' style='position: relative'>");
+        document.write("<noscript>");
+        document.write("<a href='#'>");
+        document.write(" <img alt='대시보드 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;stock-charts_mobile&#47;sheet0&#47;1_rss.png' style='border: none' />");
+        document.write("</a>");
+        document.write("</noscript>");
+        document.write("<object class='tableauViz'  style='display:none;'>");
+        document.write("<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />");
+        document.write("<param name='embed_code_version' value='3' />");
+        document.write("<param name='site_root' value='' />");
+        document.write("<param name='name' value='stock-charts_mobile&#47;sheet0' />");
+        document.write("<param name='tabs' value='no' />");
+        document.write("<param name='toolbar' value='yes' />");
+        document.write("<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;stock-charts_mobile&#47;sheet0&#47;1.png' />");
+        document.write("<param name='animate_transition' value='yes' />");
+        document.write("<param name='display_static_image' value='yes' />");
+        document.write("<param name='display_spinner' value='yes' />");
+        document.write("<param name='display_overlay' value='yes' />");
+        document.write("<param name='display_count' value='yes' />");
+        document.write("<param name='language' value='ko-KR' />");
+        document.write("<param name='filter' value='publish=yes' />");
+        document.write("</object>");
+        document.write("</div>");
+        //         }
         </script>
-		          
+        
         </div>
         <!-- Footer -->
     </div>
     <!-- End of Content Wrapper -->
 
 </div>
+<!-- End of Content Wrapper->
+
+</div>
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; 업 빛 투 2021</span>
+        </div>
+    </div>
+</footer>
+<!-- End of Page Wrapper -->
+
+        
+    
+        
 
 
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1633423521229');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
