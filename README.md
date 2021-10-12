@@ -33,11 +33,7 @@
   >
   >           \- 삼프로TV
   >
-  >           \- 키움증권 채널K
-  >
-  >           \- 삼성증권 Samsung POP
-  >
-  >           \- (미래에셋 스마트머니)
+  >           \- 한국경제TV
   >
   >    2. FinanceDataReader 라이브러리로 주식가격 데이터 수집 ( 한국거래소 자료 ) 
   >
@@ -60,6 +56,7 @@
   >       -   LSTM으로 주식 가격 시계열 예측(분석 방법 비교) 
   >    3. Label
   >       - ①+② 분석을 종합하여 주식가격의 상승/정체/하락 예측
+    
   >
   > 4. 데이터 시각화
   >
@@ -118,6 +115,8 @@
 ![image](https://user-images.githubusercontent.com/81672260/136681967-bcf07009-3de0-4da3-9ac9-79e056e42764.png)
 
 ![image](https://user-images.githubusercontent.com/81672260/136954668-eb9773c4-776f-4162-a20e-484118be080f.png)
+
+![image](https://user-images.githubusercontent.com/81672260/136954983-f2390084-32ca-4c61-a2f6-a0779467d726.png)
 
 
 
