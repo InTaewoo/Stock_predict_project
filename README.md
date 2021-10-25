@@ -15,7 +15,7 @@
 
 - data : youtube, 뉴스 기사 크롤링, FinanceDataReader(한국거래소 자료)
 
-- 개요 :
+- 개요 : 
 
   > 1. 데이터 수집
   >
